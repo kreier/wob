@@ -1,0 +1,9 @@
+{
+    "idf.espIdfPath": "${env:IDF_PATH}",
+    "idf.customExtraPaths": "",
+    "idf.portWin": "COM3",
+    "idf.portUnix": "/dev/ttyUSB0",
+    "idf.openOcdConfigs": ["board/esp32c3-builtin.cfg"],
+    "C_Cpp.intelliSenseEngine": "default",
+    "editor.formatOnSave": true
+}

@@ -1,0 +1,3 @@
+idf.py create-project power_button_penta
+cd power_button_penta
+idf.py add-dependency "espressif/esp_tinyusb^1.4.3"

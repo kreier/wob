@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ESP-IDF: Build",
+            "type": "shell",
+            "command": "idf.py build",
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "ESP-IDF: Flash",
+            "type": "shell",
+            "command": "idf.py -p ${config:idf.portWin} flash",
+            "group": "test",
+            "dependsOn": "ESP-IDF: Build"
+        },
+        {
+            "label": "ESP-IDF: Monitor",
+            "type": "shell",
+            "command": "idf.py -p ${config:idf.portWin} monitor",
+            "group": "test"
+        },
+        {
+            "label": "ESP-IDF: Flash & Monitor",
+            "type": "shell",
+            "command": "idf.py -p ${config:idf.portWin} flash monitor",
+            "group": "test",
+            "dependsOn": "ESP-IDF: Build"
+        }
+    ]
+}
